@@ -1,0 +1,45 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+task createJavaProject << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs()}
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+    //maven {url "http://maven.oschina.net/content/groups/public/"}
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile 'org.springframework.batch:spring-batch-core:3.0.5.RELEASE'
+    compile 'org.springframework:spring-test:4.0.5.RELEASE'
+    compile 'org.springframework:spring-context:4.0.5.RELEASE'
+    compile 'org.springframework:spring-bean:4.0.5.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.0.5.RELEASE'
+
+    compile 'net.sourceforge.jtds:jtds:1.3.1'
+
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'commons-io:commons-io:2.4'
+    compile 'org.apache.commons:commons-compress:1.10'
+
+    compile "org.projectlombok:lombok:1.16.6"
+
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.4'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.4'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.4'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-jul', version: '2.4'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: '2.4'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-jcl', version: '2.4'
+
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+    compile 'ch.qos.logback:logback-core:1.1.3'
+
+}
