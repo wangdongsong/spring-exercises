@@ -1,7 +1,7 @@
 .idea/
-*.iml
-.gradle/
-batch/
 build/
+.gradle/
 gradle/
-target/
+*.iml
+/batch/
+/target/
