@@ -5,3 +5,7 @@ gradle/
 *.iml
 /batch/
 /target/
+gradlew.bat
+gradlew
+spring-exercises.ipr
+spring-exercises.iws
