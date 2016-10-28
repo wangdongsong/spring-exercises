@@ -22,7 +22,7 @@ dependencies {
     compile 'org.springframework.batch:spring-batch-core:3.0.5.RELEASE'
     compile 'org.springframework:spring-test:4.2.5.RELEASE'
     compile 'org.springframework:spring-context:4.2.5.RELEASE'
-    compile 'org.springframework:spring-bean:4.2.5.RELEASE'
+    compile 'org.springframework:spring-beans:4.2.5.RELEASE'
     compile 'org.springframework:spring-jdbc:4.2.5.RELEASE'
     compile 'org.springframework:spring-oxm:4.2.5.RELEASE'
 
@@ -43,8 +43,10 @@ dependencies {
         exclude module: 'commons-logging:commons-logging'
     }
 
+    /*
     compile 'ch.qos.logback:logback-classic:1.1.5'
     compile 'ch.qos.logback:logback-core:1.1.5'
+    */
 
     //spring integration
     compile 'org.springframework.integration:spring-integration-core:4.2.5.RELEASE'
